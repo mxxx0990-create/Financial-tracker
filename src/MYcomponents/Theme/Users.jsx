@@ -1,3 +1,5 @@
+
+
 import { createSlice } from "@reduxjs/toolkit"
 
 const userSlice = createSlice({
@@ -6,7 +8,6 @@ const userSlice = createSlice({
     items: [],
     totalPrise: 0,
   },
-
   reducers: {
     setBalance(state, action) {
       state.totalPrise = Number(action.payload)
@@ -14,10 +15,11 @@ const userSlice = createSlice({
 
     buyItem(state, action) {
       const price = Number(action.payload.prise)
-
       if (state.totalPrise >= price) {
         state.items.push(action.payload)
         state.totalPrise -= price
+      } else {
+        alert("Недостаточно денег для покупки")
       }
     },
 
@@ -28,7 +30,6 @@ const userSlice = createSlice({
     },
   },
 })
-
 
 export const { setBalance, buyItem, sellItem } = userSlice.actions
 export default userSlice.reducer

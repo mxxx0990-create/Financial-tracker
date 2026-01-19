@@ -7,4 +7,7 @@
     color: azure;
     font-size: 30px;
     background-color: rgb(4, 4, 74);
+    position: fixed;
+    left: 0;
+    top: 0;
 }

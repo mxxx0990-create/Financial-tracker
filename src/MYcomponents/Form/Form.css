@@ -1,14 +1,14 @@
 .form {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start; /* Измени с center на flex-start */
+    align-items: flex-start; 
     width: 100%;
     gap: 20px;
     max-width: 1400px;
-    margin: 0 auto;
+    margin: 15vh auto 0;
 }
 
 .main {
-    flex: 1; /* Главная часть заберет всё свободное место */
-    min-width: 0; /* Важно для работы flex с внутренними прокрутками */
+    flex: 1; 
+    min-width: 0; 
 }

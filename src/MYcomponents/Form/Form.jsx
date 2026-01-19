@@ -4,8 +4,7 @@ import { useForm, Controller } from 'react-hook-form'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card'
 import { Input } from '@/components/ui/input'
-import Aside from '../Aside/Aside'
-import Aside2 from '../Aside/Aside2'
+
 import Tab from '../Tabs/Tabs'
 import { Select, SelectTrigger, SelectValue, SelectContent, SelectItem } from '@/components/ui/select'
 import DialogDemo from '../Dialog/Dialog'
@@ -43,7 +42,7 @@ function Form() {
   return (
     <div className='form'>
       
-      <Aside2 />
+     
       <main className="main">
         <Card className="mt-2">
           <form onSubmit={handleSubmit(onSubmit)}>
@@ -95,7 +94,7 @@ function Form() {
       </main>
 
       
-      <Aside />
+     
     </div>
   )
 }
