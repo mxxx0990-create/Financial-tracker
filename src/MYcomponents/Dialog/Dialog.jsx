@@ -20,9 +20,11 @@ export function DialogDemo() {
     const dispatch = useDispatch()
 
     const onSubmit = (data) => {
-        dispatch(setBalance(Number(data.balans))); 
+        dispatch(setBalance(Number(data.balans)));
         reset();
     }
+
+
 
     return (
         <Dialog>
@@ -32,7 +34,7 @@ export function DialogDemo() {
             <DialogContent className="sm:max-w-[425px]">
                 <form onSubmit={handleSubmit(onSubmit)}>
                     <DialogHeader>
-                        <DialogTitle>Edit profile</DialogTitle>
+                        <DialogTitle>Добавить сумму</DialogTitle>
                         <DialogDescription>
                             Добавьте вашу общую сумму чтобы сделать покупки
                         </DialogDescription>
@@ -53,7 +55,9 @@ export function DialogDemo() {
                         <DialogClose asChild>
                             <Button variant="outline">Отменить</Button>
                         </DialogClose>
-                        <Button type="submit">Добавить</Button>
+                        <DialogClose>
+                            <Button type="submit" >Добавить</Button>
+                        </DialogClose>
                     </DialogFooter>
                 </form>
             </DialogContent>

@@ -10,7 +10,11 @@ const userSlice = createSlice({
   },
   reducers: {
     setBalance(state, action) {
-      state.totalPrise = Number(action.payload)
+      state.totalPrise += Number(action.payload);
+      
+     
+
+    
     },
 
     buyItem(state, action) {
